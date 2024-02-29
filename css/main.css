@@ -23,18 +23,27 @@ p {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: "Gilroy";
   /* font-family: "Chronicle Dislplay Roman", serif; */
   background-color: #0b1d26;
   color: #fff;
   background-image: url("./../img/bg.jpg");
-  background-size: 100% auto;
+  width: 1920px;
+  /* background-size: 100% auto; */
   background-repeat: no-repeat;
+  background-position-y: 0px;
+  background-position-x: center;
+}
+
+.container {
+  max-width: 1492px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header {
-  padding-top: 64px;
+  padding: 64px 0 843px;
 
   text-align: center;
 }
@@ -109,7 +118,6 @@ body {
 .hero {
   display: block;
   margin: 0 auto;
-  margin-bottom: 843px;
   width: 980px;
   padding: 0 15px;
   text-align: left;
@@ -182,6 +190,100 @@ body {
   /* transition: transform 0.15s ease; */
 }
 
-.hero-scroll:hover::after {
-  /* transform: translateY(45%); */
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-category {
+  position: relative;
+  padding-left: 96px;
+  margin-bottom: 27px;
+
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #fbd784;
+}
+
+.article-category::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: block;
+  content: "";
+  width: 72px;
+  height: 2px;
+
+  background-color: #fbd784;
+}
+
+.article-text {
+  position: relative;
+  max-width: 782px;
+  padding-left: 150px;
+}
+
+.article-text::before {
+  position: absolute;
+  display: block;
+  content: attr(data-number);
+  width: 240px;
+  height: 240px;
+  left: 0px;
+  top: -50%;
+  transform: translateY(50%);
+
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.article-title {
+  margin-bottom: 27px;
+  max-width: 555px;
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.article p {
+  margin-bottom: 27px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.78;
+}
+
+.article-read-more {
+  display: inline-block;
+  position: relative;
+  padding-right: 40px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #fbd784;
+}
+
+.article-read-more::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 24px;
+  height: 16px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-image: url("./../img/icons/arrow_right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article-img {
 }
