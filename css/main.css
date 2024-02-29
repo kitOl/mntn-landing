@@ -31,7 +31,7 @@ body {
   background-color: #0b1d26;
   color: #fff;
   background-image: url("./../img/bg.jpg");
-  width: 1920px;
+  background-size: 1920px auto;
   /* background-size: 100% auto; */
   background-repeat: no-repeat;
   background-position-y: 0px;
@@ -55,7 +55,7 @@ body {
 }
 
 .container-wide {
-  width: 1790px;
+  max-width: 1790px;
   padding: 0 15px;
   margin: 0 auto;
 }
