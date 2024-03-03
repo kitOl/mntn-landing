@@ -1,6 +1,12 @@
 /* @import "./reset.css"; */
 * {
   box-sizing: border-box;
+  padding: 0;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ul,
@@ -111,14 +117,8 @@ body {
 
 .nav-list a:hover::after {
   position: absolute;
-  left: 0;
   bottom: -5px;
 
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #fbd784;
   opacity: 1;
   /* border-radius: 3px; */
 }
@@ -128,7 +128,9 @@ body {
 }
 
 .account {
+  position: relative;
   width: 98px;
+  padding-left: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,6 +144,112 @@ body {
 
 .account a:hover {
   color: #fbd784;
+}
+
+.account::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-image: url(./../img/icons/account.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.nav-button {
+  position: relative;
+  z-index: 9;
+  display: none;
+  cursor: pointer;
+  background: none;
+}
+
+.nav-button:focus,
+.nav-button:active {
+  outline: none;
+}
+
+.nav-button-icon {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 3px;
+  background-color: #fff;
+  border: none;
+}
+
+.nav-button-icon::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  background: #fff;
+
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.nav-button-icon::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  background: #fff;
+
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.nav-button-close .nav-button-icon {
+  background-color: transparent;
+}
+
+.nav-button-close .nav-button-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-button-close .nav-button-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 320px;
+  height: 100%;
+
+  padding: 70px 70px 50px 30px;
+  background-color: rgba(23, 67, 79, 0.86);
+}
+
+.mobile-nav .nav-list,
+.mobile-nav .account {
+  display: block;
+}
+
+.mobile-nav ul {
+  flex-direction: column;
+  align-items: start;
+  row-gap: 15px;
+
+  margin-bottom: 25px;
 }
 
 .hero {
@@ -353,6 +461,14 @@ body {
   margin-bottom: 24px;
 }
 
+.footer-copyright-logo a {
+  transition: all 500ms cubic-bezier(1, -0.6, 0.765, 0.25);
+}
+
+.footer-copyright-logo a:hover {
+  letter-spacing: 7px;
+}
+
 .footer-copyright-desc {
   max-width: 303px;
   font-size: 18px;
@@ -420,15 +536,8 @@ body {
 }
 
 .footer-nav a:hover::after {
-  position: absolute;
-  left: 0;
   bottom: -5px;
 
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
   opacity: 1;
   /* border-radius: 3px; */
 }

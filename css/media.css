@@ -1,0 +1,24 @@
+.header-,
+.main,
+.footer {
+  display: none !important;
+}
+
+.hero {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .nav-list,
+  .account {
+    display: none;
+  }
+
+  .nav-button {
+    display: block;
+  }
+
+  .mobile-nav-active {
+    display: flex;
+  }
+}
