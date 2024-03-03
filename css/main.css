@@ -223,6 +223,7 @@ body {
 
 .mobile-nav {
   position: fixed;
+  z-index: 7;
 
   top: 0;
   right: 0;
@@ -255,7 +256,7 @@ body {
 .hero {
   display: block;
   margin: 0 auto;
-  width: 980px;
+  max-width: 980px;
   padding: 0 15px;
   text-align: left;
 
@@ -274,7 +275,8 @@ body {
 
   font-size: 18px;
   font-weight: 800;
-  letter-spacing: 6px;
+  letter-spacing: 0.33em;
+  /* letter-spacing: 6px; */
   text-transform: uppercase;
   color: #fbd784;
 }

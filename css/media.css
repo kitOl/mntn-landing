@@ -4,11 +4,30 @@
   display: none !important;
 }
 
-.hero {
-  display: none;
+@media (max-width: 1100px) {
+  body {
+    /* background-size: unset; */
+    background-position-y: -120px;
+    background-position-x: left;
+  }
+
+  .hero-title {
+    font-size: 68px;
+  }
 }
 
 @media (max-width: 800px) {
+  body {
+    /* background-size: unset; */
+    /* background-position-y: -320px; */
+    background-position-x: -70px;
+    background-size: cover;
+  }
+
+  .nav {
+    margin-bottom: 90px;
+  }
+
   .nav-list,
   .account {
     display: none;
@@ -20,5 +39,14 @@
 
   .mobile-nav-active {
     display: flex;
+  }
+
+  .hero-category {
+    padding-left: 90px;
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 38px;
   }
 }
