@@ -71,6 +71,10 @@ body {
   margin: 0 auto;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .row {
   display: flex;
   align-items: center;

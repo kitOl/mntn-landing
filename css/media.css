@@ -77,6 +77,10 @@
     display: block;
   }
 
+  .nav-button-icon {
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  }
+
   .mobile-nav-active {
     display: flex;
   }
@@ -87,7 +91,8 @@
   }
 
   .hero-title {
-    font-size: 38px;
+    font-size: 48px;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
   }
 
   .article-title {
@@ -108,11 +113,17 @@
 
   .article-img {
     margin-bottom: 70px;
-    width: 95%;
+    /* width: 95%; */
+    width: unset;
+    max-width: 320px;
   }
 }
 
 @media (max-width: 520px) {
+  .hero-title {
+    font-size: 44px;
+  }
+
   .footer-nav-wrapper {
     width: unset;
     max-width: 460px;
