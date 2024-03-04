@@ -1,6 +1,6 @@
 .header-,
 .main-,
-.footer {
+.footer- {
   display: none !important;
 }
 
@@ -32,6 +32,23 @@
 
   .article-img {
     width: 45%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer-nav-wrapper {
+    width: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-wrapper {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .footer-nav-wrapper {
+    margin-bottom: 80px;
   }
 }
 
@@ -92,5 +109,14 @@
   .article-img {
     margin-bottom: 70px;
     width: 95%;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-nav-wrapper {
+    width: unset;
+    max-width: 460px;
+    flex-direction: column;
+    gap: 30px;
   }
 }
